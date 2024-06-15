@@ -1,5 +1,4 @@
 <?php
-exit("erro");
 $Nome		= $_POST["first-name"]." ".$_POST["last-name"];	// Pega o valor do campo Nome
 $Fone		= $_POST["phone"];	// Pega o valor do campo Telefone
 $Email		= $_POST["email"];	// Pega o valor do campo Email
