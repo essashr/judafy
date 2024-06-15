@@ -128,46 +128,44 @@
             </div>
             <div class="col-lg-8">
               <h2>Entre em Contato</h2>
-              <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="row row-30">
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <input class="form-input" id="contact-first-name" type="text" name="first-name" data-constraints="@Required">
-                      <label class="form-label" for="contact-first-name">Primeiro Nome</label>
-                    </div>
+              <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" action="send.php" method="POST" >
+                  <div class="row row-30">
+                      <div class="col-md-6">
+                          <div class="form-wrap">
+                              <input class="form-input" id="contact-first-name" type="text" name="first-name" data-constraints="@Required">
+                              <label class="form-label" for="contact-first-name">Primeiro Nome</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-wrap">
+                              <input class="form-input" id="contact-last-name" type="text" name="last-name" data-constraints="@Required">
+                              <label class="form-label" for="contact-last-name">Último Nome</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-wrap">
+                              <label class="form-label" for="contact-email">E-mail</label>
+                              <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Required @Email">
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-wrap">
+                              <label class="form-label" for="contact-phone">Telefone</label>
+                              <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Required @PhoneNumber">
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="form-wrap">
+                              <label class="form-label" for="contact-message">Mensagem</label>
+                              <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <button class="button button-lg button-primary button-raven" type="submit">Enviar</button>
+                      </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <input class="form-input" id="contact-last-name" type="text" name="last-name" data-constraints="@Required">
-                      <label class="form-label" for="contact-last-name">Último Nome</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <label class="form-label" for="contact-email">E-mail</label>
-                      <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Required @Email">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <label class="form-label" for="contact-phone">Telefone</label>
-                      <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Required @PhoneNumber">
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-wrap">
-                      <label class="form-label" for="contact-message">Mensagem</label>
-                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <button class="button button-lg button-primary button-raven" type="submit">Enviar</button>
-                  </div>
-                </div>
               </form>
-            </div>
-          </div>
-        </div>
+          </div>          
       </section>
       <footer class="section footer-classic bg-gray-950">
         <div class="footer-classic-main">

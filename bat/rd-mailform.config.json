@@ -1,8 +1,8 @@
 {
-  "useSmtp": false,
+  "useSmtp": true,
   "host": "stmp.gmail.com",
-  "port": 465,
-  "username": "demo@gmail.com",
-  "password": "demopassword",
-  "recipientEmail": "demo@gmail.com"
+  "port": 25,
+  "username": "judafy.org@gmail.com",
+  "password": "Euadorocomerbatatafrita",
+  "recipientEmail": "judafy.org@gmail.com"
 }

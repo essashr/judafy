@@ -373,7 +373,7 @@
                     <h3>Notícias</h3>
                     <p>Insira seu e-mail para receber as notícias e atualizações sobre o nosso projeto.</p>
                     <!-- RD Mailform-->
-                    <form class="rd-form rd-mailform form-inline subscribe-form" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                    <form class="rd-form rd-mailform form-inline subscribe-form" data-form-output="form-output-global" data-form-type="subscribe" method="post" /*action="bat/rd-mailform.php"*/ action="send.php">
                       <div class="form-wrap">
                         <input class="form-input" id="subscribe-form-2-email" type="email" name="email" data-constraints="@Email @Required">
                         <label id="index3" class="form-label" for="subscribe-form-2-email">E-mail</label>
@@ -400,4 +400,28 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
+  <script>
+    // console.log("teste");
+    function sendEmail(){
+      $.ajax({
+            url : "send.php",
+            type : 'POST',
+            dataType: "json",
+            data: 
+            {
+                "id_usuario" : id_usuario,
+                "data1":data1,
+                "data2":data2
+            },
+            success : function(data){
+                var result = data;
+               
+                $("#tabela_logs").html(html_tabela);
+            },
+            error : function(data){
+                alert('erro');
+            }
+        });
+    }
+  </script>
 </html>
