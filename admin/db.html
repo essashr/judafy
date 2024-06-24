@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="pt-br">
+
+<head>
+    <title>Banco de Dados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-logo">
+            <a class="brand" href="../index.html"><img class="brand-logo-dark" src="../images/pourpose.png" alt=""
+                    width="245" height="50"></a>
+        </div>
+        <div class="preloader-body">
+            <div class="cssload-container">
+                <div class="cssload-speeding-wheel"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="wrapper col-12 col-lg-5">
+                    <h1>Newsletter</h1>
+                    <h2>Usuários inscritos nas notícias da página.</h2>
+                    <div id="newsletterWrapper"></div>
+                </div>
+                <div class="wrapper col-12 col-lg-5">
+                    <h1>Formulários</h1>
+                    <h2>Usuários que enviaram formulários de contato.</h2>
+                    <div id="contactsWrapper"></div>
+                </div>
+            </div>
+        </div>
+        <form action="javascript:void(0);">
+            <button type="submit" class="ui-log-out bx bx-log-out" id="uiLogOut" onclick="logOut()"></button>
+        </form>
+    </div>
+    <script src="../js/core.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/firebaseConfig.js" type="module"></script>
+    <script src="../js/logOut.js" type="module"></script>
+    <script src="../js/dataBase.js" type="module"></script>
+</body>
+</html>
