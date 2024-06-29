@@ -229,10 +229,6 @@
 	content: "\f001";
 }
 
-.fa-search:before {
-	content: "\f002";
-}
-
 .fa-envelope-o:before {
 	content: "\f003";
 }
@@ -277,14 +273,6 @@
 .fa-close:before,
 .fa-times:before {
 	content: "\f00d";
-}
-
-.fa-search-plus:before {
-	content: "\f00e";
-}
-
-.fa-search-minus:before {
-	content: "\f010";
 }
 
 .fa-power-off:before {
@@ -3152,10 +3140,6 @@
 
 .mdi-account-remove:before {
 	content: "\f114";
-}
-
-.mdi-account-search:before {
-	content: "\f115";
 }
 
 .mdi-account-star:before {
@@ -9581,14 +9565,6 @@
 	content: "\e09b";
 }
 
-.fl-bigmug-line-search74:before {
-	content: "\e09c";
-}
-
-.fl-bigmug-line-search78:before {
-	content: "\e09d";
-}
-
 .fl-bigmug-line-share27:before {
 	content: "\e09e";
 }
@@ -10607,10 +10583,6 @@
 
 .linearicons-folder:before {
 	content: "\e9ba";
-}
-
-.linearicons-folder-search:before {
-	content: "\e9bb";
 }
 
 .linearicons-folder-plus:before {
@@ -13071,10 +13043,6 @@
 
 .linearicons-magnifier:before {
 	content: "\ec22";
-}
-
-.linearicons-file-search:before {
-	content: "\ec23";
 }
 
 .linearicons-find-replace:before {

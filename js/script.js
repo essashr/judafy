@@ -33,7 +33,6 @@
 			statefulButton: $('.btn-stateful'),
 			viewAnimate: $('.view-animate'),
 			wow: $(".wow"),
-			twitterfeed: $(".twitter"),
 		};
 	// Initialize scripts that require a loaded page
 	$window.on('load', function () {
@@ -343,30 +342,16 @@
 				});
 			}
 		}
-		/**
-		 * @desc Check if all elements pass validation
-		 * @param {object} elements - object of items for validation
-		 * @param {object} captcha - captcha object for validation
-		 * @return {boolean}
-		 */
-		$('form').on('submit', function(event) {
-			var elements = $(this).find('.form-control-has-validation');
-		
-			if (!isValidated(elements)) {
-				event.preventDefault();
-				return; 
-			}
-		});
-		
+
 		function isValidated(elements) {
 			var errors = 0;
-		
+
 			if (elements.length) {
-				elements.each(function() {
+				elements.each(function () {
 					var $input = $(this);
 					var results = $input.regula('validate');
 					var $validation = $input.siblings(".form-validation");
-		
+
 					if (results.length) {
 						errors++;
 						$validation.text(results[0].message).parent().addClass("has-error");
@@ -375,10 +360,10 @@
 					}
 				});
 			}
-		
+
 			return errors === 0;
 		}
-		
+		// script.js
 
 		// Regula
 		if (plugins.regula.length) {
@@ -777,24 +762,6 @@
 						bar.addClass('animated-first');
 					}
 				}, progressBar));
-			}
-		}
-
-
-		// RD Twitter Feed
-		if (plugins.twitterfeed.length > 0) {
-			var i;
-			for (i = 0; i < plugins.twitterfeed.length; i++) {
-				var twitterfeedItem = plugins.twitterfeed[i];
-				$(twitterfeedItem).RDTwitter({
-					hideReplies: false,
-					localTemplate: {
-						avatar: "images/features/rd-twitter-post-avatar-48x48.jpg"
-					},
-					callback: function () {
-						$window.trigger("resize");
-					}
-				});
 			}
 		}
 

@@ -27,7 +27,7 @@ async function fetchContacts() {
                 contactsWrapper.appendChild(contactDiv);
             });
         } else {
-            contactsWrapper.innerHTML = '<p>Nenhum contato encontrado.</p>';
+            contactsWrapper.innerHTML = '<p>Nenhum formulário encontrado.</p>';
         }
     } catch (error) {
         console.log(error);
