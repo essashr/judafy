@@ -11418,7 +11418,7 @@ html.tablet .ui-to-top {
 
 .owl-carousel-dots-space .owl-item {
 	filter: grayscale(100%);
-	transition: filter .3s ease-in-out;
+	transition: filter .1s ease-in-out;
 }
 
 .owl-carousel-dots-space .owl-item:hover {
