@@ -1,15 +1,19 @@
+import { app } from './firebaseConfig.js';
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const auth = getAuth();
 const form = document.querySelector('form');
 const errorMessage = document.getElementById('error-message');
+const loginContainer = document.querySelector('.login');
+const loginForm = document.getElementById('login-form');
 
 async function login(email, password) {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
         console.log('Usuário logado:', user);
-        window.location.href = "db.html";
+        showButtons();
+        loginForm.reset();
     } catch (error) {
         console.error('Erro ao fazer login:', error);
         showError('E-mail ou senha inválidos');
@@ -19,7 +23,7 @@ async function login(email, password) {
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log('Usuário logado:', user);
-        window.location.href = "db.html";
+        showButtons();
     } else {
         console.log('Nenhum usuário logado.');
     }
@@ -47,4 +51,31 @@ function showError(message) {
     setTimeout(() => {
         errorMessage.classList.remove('visible');
     }, 3000);
+}
+
+function showButtons() {
+    if (!document.querySelector('.buttons')) {
+        const buttonsDiv = document.createElement('div');
+        buttonsDiv.classList.add('buttons');
+
+        const newsletterButton = document.createElement('button');
+        newsletterButton.classList.add('btn');
+        newsletterButton.textContent = 'Newsletter';
+        buttonsDiv.appendChild(newsletterButton);
+
+        const formsButton = document.createElement('button');
+        formsButton.classList.add('btn');
+        formsButton.textContent = 'Forms';
+        buttonsDiv.appendChild(formsButton);
+
+        newsletterButton.addEventListener('click', () => {
+            window.location.href = 'newsletter.html';
+        });
+
+        formsButton.addEventListener('click', () => {
+            window.location.href = 'forms.html';
+        });
+
+        loginContainer.appendChild(buttonsDiv);
+    }
 }

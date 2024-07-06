@@ -1,6 +1,8 @@
 import { app } from './firebaseConfig.js';
 import { getDatabase, ref, get } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+import { getAuth, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
 
+const auth = getAuth();
 const db = getDatabase(app);
 
 async function fetchContacts() {
@@ -60,6 +62,22 @@ async function fetchNewsletter() {
         console.log(error);
     }
 }
+
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+        window.location.href = "login.html";
+    }
+});
+
+async function logOut() {
+    try {
+        await signOut(auth);
+    } catch (error) {
+        console.error('Erro ao deslogar:', error);
+    }
+}
+
+window.logOut = logOut;
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchContacts();
