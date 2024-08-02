@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = (req, res) => {
     const firebaseConfig = {
         apiKey: process.env.FIREBASE_API_KEY,

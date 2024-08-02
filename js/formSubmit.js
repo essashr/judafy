@@ -1,5 +1,5 @@
 import { app } from './firebaseConfig.js';
-import { getDatabase, ref, push } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+import { getDatabase, ref, push, runTransaction } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
 
 const db = getDatabase(app);
 const form = document.getElementById('contactForm');
@@ -88,7 +88,6 @@ form.addEventListener('submit', async (event) => {
         const mensagem = document.getElementById('contact-message').value;
 
         const now = new Date();
-
         const formattedTimestamp = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
 
         const newContact = {
@@ -103,7 +102,6 @@ form.addEventListener('submit', async (event) => {
         loadingc.classList.add("visible");
 
         try {
-            const contactsRef = ref(db, 'Contatos');
             await push(contactsRef, newContact);
             setTimeout(function() {
                 loadingc.classList.remove("visible");

@@ -113,7 +113,8 @@ body {
 	line-height: 1.5;
 	font-weight: 300;
 	color: #ffffff;
-	background-color: #00050d;
+	/*background-color: #000916;*/
+	background-color: #000916;
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
@@ -6196,7 +6197,7 @@ html:not(.tablet):not(.mobile) .profile-classic-caption {
 }
 
 .page-header-1 .rd-navbar-classic.rd-navbar-static:not(.rd-navbar--is-stuck) {
-	background-color: #00050d;
+	background-color: #000916;
 }
 
 .page-header-2 {
@@ -7017,7 +7018,7 @@ html [class*='section-'].section-bottom-0 {
 @media (min-width: 1200px) {
 	.section-lg {
 		padding: 115px 0;
-		background: #00050d;
+		background: #000916;
 	}
 
 	.section-xl {
@@ -7744,7 +7745,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-default {
-	background-color: #00050d;
+	background-color: #000916;
 }
 
 .bg-default:not([style*="background-"])+.bg-default:not([style*="background-"]) {
@@ -7760,7 +7761,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-gray-100 {
-	background-color: #00050d;
+	background-color: #000916;
 }
 
 .bg-gray-100:not([style*="background-"])+.bg-gray-100:not([style*="background-"]) {
@@ -7795,7 +7796,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-gray-950 {
-	background-color: #00050d;
+	background-color: #000916;
 }
 
 .bg-gray-950:not([style*="background-"])+.bg-gray-950:not([style*="background-"]) {
@@ -8526,13 +8527,13 @@ html:not(.lt-ie10) .not-animated {
 .preloader::before {
 	left: 0;
 	right: 50%;
-	background: #00050d;
+	background: #000916;
 }
 
 .preloader::after {
 	left: 50%;
 	right: 0;
-	background: #00050d;
+	background: #000916;
 }
 
 .preloader.loaded::before,
@@ -8706,7 +8707,7 @@ html.tablet .ui-to-top {
 
 .rd-navbar {
 	display: none;
-	background: #00050d;
+	background: #000916;
 }
 
 .rd-navbar-toggle {
@@ -9124,7 +9125,7 @@ html.tablet .ui-to-top {
 	top: 0;
 	right: 0;
 	z-index: 1080;
-	background: #00050d;
+	background: #000916;
 }
 
 .rd-navbar-static.rd-navbar--is-stuck .rd-menu,
@@ -9388,12 +9389,12 @@ html.tablet .ui-to-top {
 .rd-navbar-fixed .rd-navbar-panel {
 	color: #828590;
 	border-bottom: 1px solid #eff2f4;
-	background: #00050d;
+	background: #000916;
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {
 	color: #ffffff;
-	background: #00050d;
+	background: #000916;
 	border: 1px solid #eff2f4;
 	box-shadow: none;
 }
@@ -10182,7 +10183,7 @@ html.tablet .ui-to-top {
 
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
 .swiper-pagination .swiper-pagination-bullet:hover {
-	background: #00050d;
+	background: #000916;
 }
 
 .swiper-pagination.swiper-pagination-clickable .swiper-pagination-bullet {
@@ -14235,7 +14236,6 @@ ul {
 	color: #eceff1;
 	background-color: transparent;
 	border: 1px solid #eceff133;
-	border-radius: 15px;
 }
 
 @media (max-width: 1200px) {
@@ -14385,7 +14385,7 @@ ul {
 	align-items: start;
 	gap: 1.25em;
 	color: #eceff1;
-	background-color: #00050d;
+	background-color: #000916;
 	border: none;
 }
 
